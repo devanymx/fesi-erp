@@ -19,7 +19,7 @@ class DashboardController extends Controller
         $getUsers = $this->checkFilters($request, $authUser);
 
         return view('dashboard',[
-            'users' => $getUsers,
+            'users' => $getUsers->paginate(1),
         ]);
 
     }
@@ -28,18 +28,19 @@ class DashboardController extends Controller
     {
         $currentTeam = $user->currentTeam->id;
 
-        $getUsers = User::role('usuario')->where('current_team_id',$currentTeam)->paginate(1);
+        $getUsers = User::role('usuario')->where('current_team_id',$currentTeam);
+
         if ($request->has('search')){
             $getUsers = User::role('usuario')->where([
                 ['current_team_id','=',$currentTeam],
                 ['name','like','%'.$request->get('search').'%']
-            ])->paginate(1);
+            ]);
         }
 
         if ($request->has('role')){
             $getUsers = User::role($request->get('role'))->where([
                 ['current_team_id','=',$currentTeam],
-            ])->paginate(1);
+            ]);
         }
 
         return $getUsers;
