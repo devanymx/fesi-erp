@@ -18,7 +18,7 @@ class DashboardController extends Controller
 
         $getUsers = $this->usersCheckFilters($request, $authUser);
 
-        return view('dashboard',[
+        return view('users.dashboard',[
             'users' => $getUsers->paginate(1),
         ]);
 
