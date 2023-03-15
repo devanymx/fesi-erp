@@ -21,6 +21,9 @@
                                 <input type="text" name="search" id="search" class="block mr-0 rounded-none rounded-l-md border-0 py-1.5 pl-10 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="John Smith">
                             </div>
                             <input type="submit" class="relative -ml-px inline-flex items-center gap-x-1.5 rounded-r-md px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50" value="Ordenar">
+                            <a href="{{ route('dashboard', ['role' => 'usuario']) }}" class="rounded bg-indigo-50 py-2 px-2 text-xs font-semibold text-indigo-600 shadow-sm hover:bg-indigo-100">Empleados</a>
+                            <a href="{{ route('dashboard', ['role' => 'admin']) }}" class="rounded bg-red-50 py-2 px-2 text-xs font-semibold text-red-600 shadow-sm hover:bg-red-100">Administradores</a>
+
                         </div>
                     </form>
                     <div class="overflow-hidden bg-white shadow sm:rounded-md">

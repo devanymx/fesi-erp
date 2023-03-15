@@ -36,9 +36,8 @@ class DashboardController extends Controller
             ])->paginate(1);
         }
 
-        //TODO: Filter by roles.
-        if ($request->has('roles')){
-            $getUsers = User::role('usuario')->where([
+        if ($request->has('role')){
+            $getUsers = User::role($request->get('role'))->where([
                 ['current_team_id','=',$currentTeam],
             ])->paginate(1);
         }
