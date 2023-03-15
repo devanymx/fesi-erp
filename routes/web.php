@@ -18,10 +18,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(static function () {
-    Route::get('/dashboard', [DashboardController::class, 'showDashboard'])->name('dashboard');
+Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(static function () {
+
+    Route::middleware(['role:admin'])->group(static function(){
+
+        Route::get('/dashboard', [DashboardController::class, 'showDashboard'])->name('dashboard');
+
+    });
+
 });

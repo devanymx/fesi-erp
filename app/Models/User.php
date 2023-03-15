@@ -12,6 +12,9 @@ use Laravel\Jetstream\HasTeams;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 
+/**
+ * @method static role(string $string)
+ */
 class User extends Authenticatable
 {
     use HasApiTokens;
