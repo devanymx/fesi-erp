@@ -16,7 +16,7 @@ class DashboardController extends Controller
 
         $authUser = Auth::user();
 
-        $getUsers = $this->checkFilters($request, $authUser);
+        $getUsers = $this->usersCheckFilters($request, $authUser);
 
         return view('dashboard',[
             'users' => $getUsers->paginate(1),
@@ -24,7 +24,7 @@ class DashboardController extends Controller
 
     }
 
-    private function checkFilters(Request $request, User $user)
+    private function usersCheckFilters(Request $request, User $user)
     {
         $currentTeam = $user->currentTeam->id;
 
