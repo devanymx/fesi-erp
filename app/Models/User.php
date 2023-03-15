@@ -14,6 +14,7 @@ use Spatie\Permission\Traits\HasRoles;
 
 /**
  * @method static role(string $string)
+ * @property mixed $currentTeam
  */
 class User extends Authenticatable
 {
