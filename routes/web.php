@@ -30,6 +30,8 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
         Route::post('/products/create', [ProductController::class, 'createProduct'])->name('products.create');
         Route::get('/products/edit/{product}', [ProductController::class, 'editProduct'])->name('products.edit');
         Route::put('/products/update/{product}', [ProductController::class, 'updateProduct'])->name('products.update');
+        Route::get('/products/move/{product}', [ProductController::class, 'moveProduct'])->name('products.move');
+        Route::put('/products/move/{product}', [ProductController::class, 'makeMoveProduct'])->name('products.make-move');
 
     });
 

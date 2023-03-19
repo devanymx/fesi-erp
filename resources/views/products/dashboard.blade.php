@@ -46,7 +46,7 @@
                                                 </a>
                                             </div>
                                             <div class="-ml-px flex w-0 flex-1">
-                                                <a href="tel:+1-202-555-0170" class="relative inline-flex w-0 flex-1 items-center justify-center gap-x-3 rounded-br-lg border border-transparent py-4 text-sm font-semibold text-gray-900">
+                                                <a href="{{route('products.move', ['product' => $product->id])}}" class="relative inline-flex w-0 flex-1 items-center justify-center gap-x-3 rounded-br-lg border border-transparent py-4 text-sm font-semibold text-gray-900">
                                                     Añadir a sucursal
                                                 </a>
                                             </div>
@@ -54,6 +54,16 @@
                                     </div>
                                 </li>
                             @endforeach
+                            @if(count($products) < 1)
+                                    <div class="rounded-md bg-yellow-50 p-4 col-span-3">
+                                        <div class="flex">
+                                            <div class="ml-3">
+                                                <h3 class="text-2xl font-medium text-yellow-800">No se ha encontrado ningún producto.</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                @endif
                         </ul>
                     </div>
                     <div class="mt-5">

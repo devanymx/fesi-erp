@@ -24,22 +24,22 @@
                                             <div class="grid grid-cols-8 gap-6">
                                                 <div class="col-span-8 sm:col-span-4">
                                                     <label for="name" class="block text-sm font-medium leading-6 text-gray-900">Nombre del producto</label>
-                                                    <input type="text" name="name" id="name" value="{{$product->name}}" autocomplete="given-name" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                                    <input type="text" name="name" id="name" value="{{$product->name}}" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                                                 </div>
 
                                                 <div class="col-span-8 sm:col-span-4">
                                                     <label for="code" class="block text-sm font-medium leading-6 text-gray-900">Código del producto</label>
-                                                    <input type="text" name="code" id="code" value="{{$product->code}}" autocomplete="family-name" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                                    <input type="text" name="code" id="code" value="{{$product->code}}" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                                                 </div>
 
                                                 <div class="col-span-8 sm:col-span-4">
                                                     <label for="description" class="block text-sm font-medium leading-6 text-gray-900">Descripción del producto</label>
-                                                    <input type="text" name="description" value="{{$product->description}}" id="description" autocomplete="email" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                                    <input type="text" name="description" value="{{$product->description}}" id="description" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                                                 </div>
 
                                                 <div class="col-span-8 sm:col-span-6 lg:col-span-2">
                                                     <label for="type" class="block text-sm font-medium leading-6 text-gray-900">Tipo del producto</label>
-                                                    <select id="type" name="type" autocomplete="type" value="{{$product->type}}" class="mt-2 block w-full rounded-md border-0 bg-white py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                                    <select id="type" name="type" value="{{$product->type}}" class="mt-2 block w-full rounded-md border-0 bg-white py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                                                         <option>United States</option>
                                                         <option>Canada</option>
                                                         <option>Mexico</option>
@@ -48,27 +48,42 @@
 
                                                 <div class="col-span-8 sm:col-span-6 lg:col-span-2">
                                                     <label for="cost" class="block text-sm font-medium leading-6 text-gray-900">Costo</label>
-                                                    <input type="text" name="cost" id="cost" value="{{$product->cost}}" autocomplete="cost" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                                    <input type="text" name="cost" id="cost" value="{{$product->cost}}" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                                                 </div>
 
                                                 <div class="col-span-8 sm:col-span-6 lg:col-span-2">
                                                     <label for="price" class="block text-sm font-medium leading-6 text-gray-900">Precio</label>
-                                                    <input type="text" name="price" id="price" value="{{$product->price}}" autocomplete="address-level2" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                                    <input type="text" name="price" id="price" value="{{$product->price}}" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                                                 </div>
 
                                                 <div class="col-span-8 sm:col-span-3 lg:col-span-2">
                                                     <label for="measurement" class="block text-sm font-medium leading-6 text-gray-900">Medida</label>
-                                                    <input type="text" name="measurement" id="measurement" value="{{$product->measurement}}" autocomplete="address-level1" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                                    <input type="text" name="measurement" id="measurement" value="{{$product->measurement}}" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                                                 </div>
 
                                                 <div class="col-span-8 sm:col-span-3 lg:col-span-2">
                                                     <label for="photo" class="block text-sm font-medium leading-6 text-gray-900">URL de foto</label>
-                                                    <input type="text" name="photo" id="photo" value="{{$product->photo}}" autocomplete="photo" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                                    <input type="text" name="photo" id="photo" value="{{$product->photo}}" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                                                 </div>
 
                                                 <div class="col-span-8 sm:col-span-3 lg:col-span-2">
                                                     <label for="taxes" class="block text-sm font-medium leading-6 text-gray-900">Taxes</label>
-                                                    <input type="text" name="taxes" id="taxes" value="{{$product->taxes}}" autocomplete="taxes" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                                    <input type="text" name="taxes" id="taxes" value="{{$product->taxes}}" class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                                </div>
+
+                                                <div class="col-span-8 sm:col-span-3 lg:col-span-2">
+                                                    <label for="stock" class="block text-sm font-medium leading-6 text-gray-900">Stock</label>
+                                                    <input type="text" name="stock" id="stock" @if(isset($pivot)) value="{{$pivot->pivot->stock}}" @endif  class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                                </div>
+
+                                                <div class="col-span-8 sm:col-span-3 lg:col-span-2">
+                                                    <label for="min_stock" class="block text-sm font-medium leading-6 text-gray-900">Stock mínimo</label>
+                                                    <input type="text" name="min_stock" id="min_stock" @if(isset($pivot)) value="{{$pivot->pivot->min_stock}}" @endif class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                                </div>
+
+                                                <div class="col-span-8 sm:col-span-3 lg:col-span-2">
+                                                    <label for="max_stock" class="block text-sm font-medium leading-6 text-gray-900">Stock máximo</label>
+                                                    <input type="text" name="max_stock" id="max_stock" @if(isset($pivot)) value="{{$pivot->pivot->max_stock}}" @endif class="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                                                 </div>
                                             </div>
                                         </div>

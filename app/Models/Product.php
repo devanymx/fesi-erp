@@ -23,7 +23,7 @@ class Product extends Model
 
 
     public function teams(){
-        return $this->belongsToMany(Team::class);
+        return $this->belongsToMany(Team::class)->withPivot(['stock', 'min_stock', 'max_stock']);
     }
 
 }
