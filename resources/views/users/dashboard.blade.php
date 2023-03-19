@@ -70,7 +70,7 @@
                         </ul>
                     </div>
                     <div class="mt-5">
-                        {{ $users->onEachSide(3)->links()}}
+                        {{ $users->onEachSide(3)->links() }}
                     </div>
                 </div>
             </div>

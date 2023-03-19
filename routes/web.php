@@ -26,6 +26,11 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
         Route::get('/dashboard', [DashboardController::class, 'showDashboard'])->name('dashboard');
         Route::get('/dashboard/products', [ProductController::class, 'showDashboard'])->name('products.dashboard');
 
+        Route::get('/products/new', [ProductController::class, 'newProduct'])->name('products.new');
+        Route::post('/products/create', [ProductController::class, 'createProduct'])->name('products.create');
+        Route::get('/products/edit/{product}', [ProductController::class, 'editProduct'])->name('products.edit');
+        Route::put('/products/update/{product}', [ProductController::class, 'updateProduct'])->name('products.update');
+
     });
 
 });
